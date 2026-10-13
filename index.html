@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guido Gallego Paolucci · Game Developer</title>
+  <meta name="description" content="Game developer working in Unity and C#. Puzzle, platformer and roguelite projects.">
+
+  <!-- Social preview (WhatsApp, LinkedIn, etc.) -->
+  <meta property="og:title" content="Guido Martin Gallego Paolucci · Game Developer">
+  <meta property="og:description" content="Unity / C# game developer. Playable projects and what I built in each one.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://waldo47.github.io/">
+  <!-- TODO: add a 1200x630 image at assets/og-image.png and uncomment -->
+  <!-- <meta property="og:image" content="https://waldo47.github.io/assets/og-image.png"> -->
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <svg class="hero-mark" viewBox="0 0 120 92" aria-hidden="true">
+        <g class="grid">
+          <rect x="2"  y="2"  width="24" height="24"/><rect x="30" y="2"  width="24" height="24"/><rect x="58" y="2"  width="24" height="24"/>
+          <rect x="2"  y="30" width="24" height="24"/><rect x="30" y="30" width="24" height="24"/><rect x="58" y="30" width="24" height="24"/>
+          <rect x="2"  y="58" width="24" height="24"/><rect x="30" y="58" width="24" height="24"/>
+        </g>
+        <rect class="escaped" x="92" y="62" width="24" height="24"/>
+      </svg>
+
+      <h1 class="name">Guido Martin<br>Gallego Paolucci</h1>
+      <p class="role">Game Developer, Unity / C#</p>
+      <p class="intro">
+        I plan the architecture before I write the features. I rely on proven patterns (service locator,
+        object pooling, state machines, data-driven ScriptableObjects) to keep systems decoupled and easy
+        to extend, and I document each system so anyone on the team can pick it up. When something runs
+        slow, I measure it before I change it.
+      </p>
+
+      <nav class="contact" aria-label="Contact">
+        <a class="btn btn-primary" href="mailto:guidoma78@gmail.com">guidoma78@gmail.com</a>
+        <a class="btn" href="https://waldo47.itch.io" target="_blank" rel="noopener">itch.io</a>
+        <a class="btn" href="https://www.linkedin.com/in/guidomartingallegopaolucci" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Waldo47" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2 class="section-title">Projects</h2>
+
+    <!-- ============ PROJECT ============ -->
+    <article class="project" style="--accent: #3B5BDB;">
+      <div class="media">
+        <!-- Ideally swap for a short gameplay GIF/WebP stored in assets/ (max ~3 MB) -->
+        <img src="https://img.itch.zone/aW1nLzEyMTU0ODkzLnBuZw==/original/vQKvlZ.png" alt="Think Outside The Cube cover art" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Think Outside The Cube</h3>
+        <p class="award">Winner of the EVA 2024 Original Idea award</p>
+        <p>
+          A 2D puzzle-platformer about lateral thinking: to solve each level you have to think outside the box.
+          Made with a team of four at LIVE Games, mentored by Sebastián Blanco.
+        </p>
+        <p class="my-part">
+          <strong>What I did:</strong> all of the programming, game design and level design. For the final
+          levels I built small tools outside Unity to help create them.
+        </p>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>Puzzle-platformer</li><li>Level design</li><li>Tooling</li></ul>
+        <a class="btn btn-primary" href="https://live-games.itch.io/think-outside-the-cube" target="_blank" rel="noopener">Download on itch.io</a>
+      </div>
+    </article>
+
+    <!-- ============ PROJECT ============ -->
+    <article class="project" style="--accent: #E8590C;">
+      <div class="media">
+        <!-- <img src="assets/a-lot-of-bullets.gif" alt="A Lot Of Bullets gameplay" loading="lazy"> -->
+        <span class="media-placeholder">A Lot Of Bullets</span>
+      </div>
+      <div class="body">
+        <h3>A Lot Of Bullets</h3>
+        <p class="status">In development</p>
+        <p>
+          A 2D roguelite shooter where the order of your bullet effects changes the bullet.
+          Effects run as a pipeline: each one acts on the output of the one above it, and the player
+          can reorder them freely. Your own bullets don't hurt you, but the explosions, puddles and
+          mines they spawn do, so a wild combo can end your run.
+        </p>
+        <p class="my-part">
+          <strong>What I did:</strong> a two-person project with Maximiliano Caneda, where I made about 80%
+          of the commits. I set up the architecture (service locator, object pooling) and built the gameplay
+          systems: the effect pipeline, where effects listed after a split travel to the child bullets,
+          elemental damage with status effects, enemies and wave scaling, bosses that assemble random attack
+          patterns, and the shop with rarity rolls and rerolls. I also profiled the game to hold 60 fps with
+          around 90 enemies on screen and set up Edit Mode tests for the core rules.
+        </p>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>Roguelite</li><li>Architecture</li><li>Pooling</li><li>Profiling</li></ul>
+        <span class="btn btn-disabled" aria-disabled="true">Playable build coming soon</span>
+      </div>
+    </article>
+
+    <!-- ============ PROJECT ============ -->
+    <article class="project" style="--accent: #2B8A3E;">
+      <div class="media">
+        <!-- <img src="assets/frenetic-platformer.gif" alt="Frenetic Platformer gameplay" loading="lazy"> -->
+        <span class="media-placeholder">Frenetic Platformer</span>
+      </div>
+      <div class="body">
+        <h3>Frenetic Platformer</h3>
+        <p>
+          A precision platformer: dash and jump with exact timing to get past traps, room after room.
+          Levels built with Unity Tilemaps.
+        </p>
+        <p class="my-part">
+          <strong>What I did:</strong> the character controller as a state machine, the traps and room
+          transitions, and most of the core systems (GameManager, LevelManager, TrapManager, AudioManager).
+          I also designed the levels and their structure, and handled the camera with Cinemachine and the
+          post-processing.
+        </p>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>Platformer</li><li>State machine</li><li>Tilemaps</li><li>Cinemachine</li></ul>
+        <span class="btn btn-disabled" aria-disabled="true">Coming soon to itch.io</span>
+      </div>
+    </article>
+
+    <!-- ============ PROJECT ============ -->
+    <article class="project" style="--accent: #0C8599;">
+      <div class="media">
+        <img src="https://img.itch.zone/aW1nLzEyMTU0OTQzLnBuZw==/original/kRrPjj.png" alt="Sensitive Landscapes cover art" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Sensitive Landscapes</h3>
+        <p>
+          Three small low-poly 3D landscapes to relax in and let your mind wander, with an optional
+          voiced narrative. An environment prototype focused on atmosphere, lighting and pacing.
+          Made with a team of six at LIVE Games, released for Windows, Android and VR.
+        </p>
+        <p class="my-part">
+          <strong>What I did:</strong> nearly everything, from the 3D assets to the player movement.
+          I wrote custom shaders, set up the post-processing and ported the game to VR.
+        </p>
+        <ul class="tags"><li>Unity</li><li>3D</li><li>Shaders</li><li>Post-processing</li><li>VR</li></ul>
+        <a class="btn btn-primary" href="https://live-games.itch.io/sensitive-landscapes" target="_blank" rel="noopener">Download on itch.io</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Want to talk about a project or a role? Write to <a href="mailto:guidoma78@gmail.com">guidoma78@gmail.com</a>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
